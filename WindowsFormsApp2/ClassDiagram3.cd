@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApp2.ADataSet" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAQQAAAAAgCQBgAAAAAIAEgBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.Program" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.SkorDataSet" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAQQAAAAAgCQBgAAAAAIAEgBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.SkorTablosu" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAIQACACIACAAggAAAAIEAiAAAAAAA=</HashCode>
+      <FileName>SkorTablosu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.YeniOyun" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gMz3/372gCQQAiAIQFDG9f9+ASDj+n8fWAAgv//XMQU=</HashCode>
+      <FileName>YeniOyun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.ADataSetTableAdapters.Tablo1TableAdapter" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.ADataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAEgBABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.Properties.Resources" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Om0RTQALBAiIExwEAAQNMoLh8/f/foC+//9/nyTA//8=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.Properties.Settings" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAIAAAAAAAIAAAAAABAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.SkorDataSetTableAdapters.Tablo1TableAdapter" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.SkorDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAEgBABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp2.Form1" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQCAAACAAMACAAEACAABJAAQEAGRIAAQAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

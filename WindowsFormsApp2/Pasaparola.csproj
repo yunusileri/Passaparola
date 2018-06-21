@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{795C215F-FDDA-471B-A7C7-47ABC011AE57}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>Pasaparola</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsilSorular.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NasilOynanir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NasilOynanir.Designer.cs">
+      <DependentUpon>NasilOynanir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skor.cs" />
+    <Compile Include="SkorKaydet.cs" />
+    <Compile Include="SkorTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkorTablosu.Designer.cs">
+      <DependentUpon>SkorTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenelSorular.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="VeriTabaniDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeriTabaniDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YeniOyun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniOyun.Designer.cs">
+      <DependentUpon>YeniOyun.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NasilOynanir.resx">
+      <DependentUpon>NasilOynanir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Skor.resx">
+      <DependentUpon>Skor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkorTablosu.resx">
+      <DependentUpon>SkorTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniOyun.resx">
+      <DependentUpon>YeniOyun.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VeriTabaniDataSet.xsc">
+      <DependentUpon>VeriTabaniDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VeriTabaniDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VeriTabaniDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VeriTabaniDataSet.xss">
+      <DependentUpon>VeriTabaniDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-button-over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Başlıksız.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\330en48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nasıl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nasıl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nasıl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nasıl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark_grey_windows_8_background_by_gifteddeviant-d4yvcut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cıkıs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ses1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aç.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kapat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ı.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ö.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ş.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ü.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pasaparola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ç.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ç1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ı1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ö1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ş1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ü1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ç2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ı2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ö2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ş2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ü2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ç3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ı3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ö3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ş3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ü3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doğru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doğru1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boş.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yanlış.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boş1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600x900_plain-depth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110926_duz_siyah_arka_plan_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ab7ac003409ba21ec30c43452c732aa08e8008d6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109254_duz_siyah_renk_arka_plan_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pUXAVFG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-and-gray-circles-wallpaper-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\süre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boş2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\süre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Başlıksız1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir.jpg" />
+    <None Include="Resources\vRTWvAN.jpg" />
+    <None Include="Resources\vRTWvAN1.jpg" />
+    <None Include="Resources\oyun.png" />
+    <None Include="Resources\oyun1.png" />
+    <None Include="Resources\basla1.png" />
+    <None Include="Resources\nasıl3.png" />
+    <None Include="Resources\nasıl4.png" />
+    <None Include="Resources\nasıl5.png" />
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_45023241-stock-illustration-orange-rays-background.jpg" />
+    <None Include="Resources\fon-oranzhevyy-perehod-yarko-po.jpg" />
+    <None Include="Resources\sun-1536652_960_720.jpg" />
+    <None Include="Resources\4KiU5l.jpg" />
+    <None Include="Resources\gray_bg.jpg" />
+    <None Include="Resources\images1.jpg" />
+    <None Include="Resources\texture_background_shadow_spot_lights_50476_2560x1600.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\DD-Grunge-Sunburst-Background-34220-Preview.jpg" />
+    <None Include="Resources\toaster.jpg" />
+    <None Include="Resources\aa.png" />
+    <None Include="Resources\aa1.png" />
+    <None Include="Resources\aa2.png" />
+    <None Include="Resources\aa3.png" />
+    <None Include="Resources\aa4.png" />
+    <None Include="Resources\aa5.png" />
+    <None Include="Resources\as.png" />
+    <None Include="Resources\as1.png" />
+    <None Include="Resources\as2.png" />
+    <None Include="Resources\as3.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\minus-8-256.gif" />
+    <None Include="Resources\minus-8-256 %281%29.gif" />
+    <None Include="Resources\kücük.png" />
+    <None Include="Resources\nasıl6.png" />
+    <None Include="Resources\skor1.png" />
+    <None Include="Resources\yenile.png" />
+    <None Include="Resources\sahne-arkaplan-backgrounds-stage %2838%29.jpg" />
+    <None Include="Resources\oyunbasla.png" />
+    <None Include="Resources\cevap.png" />
+    <None Include="Resources\starGold.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\exit3.png" />
+    <None Include="Resources\refresh1.png" />
+    <None Include="Resources\Win10-wallpaper-10852876.jpg" />
+    <Content Include="VeriTabani.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
